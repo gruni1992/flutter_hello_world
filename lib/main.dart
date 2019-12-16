@@ -1,20 +1,33 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Welcome to Flutter',
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Welcome to Flutter'),
-        ),
-        body: Center(
-          child: Text('Hello Tobi!'),
-        ),
+void main(){
+  return runApp(MaterialApp(
+    home: Scaffold(
+      appBar: AppBar(title: Text("Hello World")),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children:[
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.red,
+            ),
+            child: Text("One")
+          ),
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.green,
+            ),
+            child: Text("Two")
+          ),
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.blue,
+            ),
+            child: Text("Three")
+          ),
+        ]
       ),
-    );
-  }
+    )
+  ));
 }
